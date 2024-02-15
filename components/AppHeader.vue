@@ -1,27 +1,34 @@
 <script lang="ts" setup>
 
-const route = useRoute()
-console.log(route);
-
-const isActive = (path: string) => route.path === path;
 
 </script>
 
 <template>
-  <header class="px-4 md:px-6 py-4 md:py-6 lg:py-8">
+  <header class="px-4 md:px-6 py-4 md:py-6 shadow-sm drop-shadow-sm sticky top-0 backdrop-blur-md bg-white/50">
     <div class="container mx-auto">
-      <div class="flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold">iDev&apos;s Portfolio</a>
-        <div class="hidden lg:inline-flex">
+      <div class="flex flex-col lg:flex-row lg:justify-between items-center gap-2">
+        <AppLogo />
+        <div class=" lg:inline-flex">
           <nav>
-            <ul class="flex font-medium gap-6 ">
+            <ul class="flex gap-6">
               <li>
-                <NuxtLink to="/" class="hover:text-gray-600"
-                  :class="{ 'text-gray-700 pointer-events-none': isActive('/') }">Home</NuxtLink>
+                <NuxtLink to="/" class="link ">Home
+                </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/about" class="hover:text-gray-600"
-                  :class="{ 'text-gray-700 pointer-events-none': isActive('/about') }">About</NuxtLink>
+                <NuxtLink to="/about" class="link">
+                  About
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/projects" class="link">
+                  Projects
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/blog" class="link">
+                  Blog
+                </NuxtLink>
               </li>
             </ul>
           </nav>
@@ -33,3 +40,13 @@ const isActive = (path: string) => route.path === path;
     </div>
   </header>
 </template>
+
+<style scoped>
+.link {
+  @apply hover:text-gray-600 text-[18px] font-medium;
+}
+
+.router-link-active {
+  @apply text-gray-700 pointer-events-none;
+}
+</style>

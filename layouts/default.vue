@@ -4,11 +4,23 @@
     <main>
       <slot />
     </main>
+    <AppFooter />
   </div>
 </template>
 
 <script lang="ts" setup>
 
-</script>
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.ico'
+    }
+  ]
+})
 
-<style></style>
+</script>
