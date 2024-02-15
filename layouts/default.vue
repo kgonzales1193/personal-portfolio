@@ -1,6 +1,9 @@
 <template>
   <div id="viewport">
-    <slot />
+    <AppHeader />
+    <main>
+      <slot />
+    </main>
   </div>
 </template>
 

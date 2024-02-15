@@ -2,14 +2,8 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ["~/assets/css/tailwind.css"],
-	postcss: {
-		plugins: {
-			tailwindcss: {},
-			autoprefixer: {},
-		},
-	},
 
-	modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt"],
+	modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt", "nuxt-lucide-icons"],
 
 	shadcn: {
 		/**

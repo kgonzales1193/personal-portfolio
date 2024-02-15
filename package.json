@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@radix-icons/vue": "^1.0.0",
+    "@vueuse/core": "^10.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "nuxt": "^3.10.2",
+    "nuxt-lucide-icons": "^1.0.3",
     "radix-vue": "^1.4.4",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
