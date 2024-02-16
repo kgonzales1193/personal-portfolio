@@ -3,6 +3,7 @@
     <AppHeader />
     <main>
       <slot />
+      <div class="h-screen"></div>
     </main>
     <AppFooter />
   </div>

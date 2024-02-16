@@ -7,9 +7,19 @@ export default defineNuxtConfig({
 			enabled: true,
 		},
 	},
+	modules: [
+		"@nuxtjs/tailwindcss",
+		"shadcn-nuxt",
+		"nuxt-lucide-icons",
+		"@nuxtjs/color-mode",
+		"@nuxt/content",
+	],
+
 	css: ["~/assets/css/tailwind.css"],
 
-	modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt", "nuxt-lucide-icons"],
+	colorMode: {
+		classSuffix: "",
+	},
 
 	shadcn: {
 		/**
